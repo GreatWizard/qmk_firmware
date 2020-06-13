@@ -19,9 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
-#include "action_layer.h"
-#include "rgblight.h"
-#include "quantum.h"
 
 #define _QWERTY 0
 #define _COLEMAK 1

@@ -17,8 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CONFIG_H
-#define CONFIG_H
+#pragma once
 
 #include "config_common.h"
 
@@ -27,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0200
 #define MANUFACTURER    KPrepublic
 #define PRODUCT         JJ50
-#define DESCRIPTION     Preonic-like clone
+#define DESCRIPTION     A compact 50% (12x5) ortholinear keyboard
 
 /* matrix size */
 #define MATRIX_ROWS 5
@@ -38,6 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define BACKLIGHT_PIN D4
 #define BACKLIGHT_LEVELS 12
+#define BACKLIGHT_BREATHING
 
 #define RGB_DI_PIN E2
 #define RGBLED_NUM 12
@@ -45,5 +45,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_HUE_STEP 12
 #define RGBLIGHT_SAT_STEP 15
 #define RGBLIGHT_VAL_STEP 18
-
-#endif
