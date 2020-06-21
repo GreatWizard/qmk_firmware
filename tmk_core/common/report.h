@@ -107,7 +107,9 @@ enum desktop_usages {
 #        undef NKRO_SHARED_EP
 #        undef MOUSE_SHARED_EP
 #    else
-#        error "NKRO not supported with this protocol"
+#        warning "NKRO not supported with this protocol"
+#        undef NKRO_ENABLE
+#        undef NKRO_SHARED_EP
 #    endif
 #endif
 

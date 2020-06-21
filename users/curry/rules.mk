@@ -6,7 +6,11 @@ SPACE_CADET_ENABLE      = no
 LTO_ENABLE              = yes
 EXTRAKEY_ENABLE         = yes
 UNICODE_ENABLE          = yes
-NKRO_ENABLE             = yes
+
+# Enable N-Key Rollover, but it's not compliant with VUSB protocol so warning can be raised and the NKRO is disabled
+ALLOW_WARNINGS = yes
+NKRO_ENABLE = yes
+
 EXTRAKEY_ENABLE         = yes
 LEADER_ENABLE           = yes
 TAP_DANCE_ENABLE        = no
@@ -61,11 +65,4 @@ endif
 
 ifeq ($(strip $(MAKE_BOOTLOADER)), yes)
     OPT_DEFS += -DMAKE_BOOTLOADER
-endif
-
-# At least until build.mk or the like drops, this is here to prevent
-# VUSB boards from enabling NKRO, as they do not support it. Ideally
-# this should be handled per keyboard, but until that happens ...
-ifeq ($(strip $(PROTOCOL)), VUSB)
-    NKRO_ENABLE       = no
 endif
